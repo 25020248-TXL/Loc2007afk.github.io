@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Nguyễn Công Minh | Digital Portfolio</title>
+  <meta name="description"
+    content="Portfolio cá nhân của Nguyễn Công Minh (MSV: 25020265) - Sinh viên CNTT, UET - ĐHQGHN. Tổng hợp kiến thức, dự án và kỹ năng số." />
+  <meta name="author" content="Nguyễn Công Minh" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Font Awesome 6 (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- File CSS chính -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========================================
+       NAVIGATION BAR (Thanh điều hướng cố định)
+  ======================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#hero" class="nav-brand">
+        <span class="brand-icon">&lt;/&gt;</span>
+        <span>NCM</span>
+      </a>
+
+      <!-- Menu điều hướng desktop -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#projects" class="nav-link">Môn học</a></li>
+        <li><a href="#skills" class="nav-link">Năng lực</a></li>
+        <li><a href="#ai-ethics" class="nav-link">Đạo đức AI</a></li>
+        <li><a href="#personal" class="nav-link">Dự án cá nhân</a></li>
+        <li><a href="#reflection" class="nav-link">Nhìn lại</a></li>
+      </ul>
+
+      <!-- Nút hamburger cho mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Mở menu điều hướng" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       PHẦN 1: HERO SECTION (Trang giới thiệu)
+  ======================================== -->
+  <section class="hero" id="hero">
+
+    <!-- Các hạt nền trang trí (animated particles) -->
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <!-- Vòng tròn phát sáng nền -->
+    <div class="glow-orb glow-orb--1" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb--2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Badge giới thiệu -->
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UET — ĐHQGHN &nbsp;·&nbsp; MSV: 25020265 &nbsp;·&nbsp; <i class="fa-solid fa-hashtag" style="font-size:0.8em;"></i> VNU1001_E252014</span>
+      </div>
+
+      <!-- Tiêu đề chính -->
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+        Xin chào, tôi là
+        <span class="hero-name">Nguyễn Công Minh</span>
+      </h1>
+
+      <!-- Tagline -->
+      <p class="hero-tagline" data-aos="fade-up" data-aos-duration="900" data-aos-delay="160">
+        <i class="fa-solid fa-quote-left"></i>
+        Theo đuổi Đam mê Kiến trúc Phần mềm, Xử lý Đa luồng và Ứng dụng Trí tuệ Nhân tạo Trách nhiệm.
+        <i class="fa-solid fa-quote-right"></i>
+      </p>
+
+      <!-- Mô tả ngắn -->
+      <p class="hero-description" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+        Sinh viên ngành <strong>Công nghệ Thông tin</strong>, Trường Đại học Công nghệ (UET) — ĐHQGHN.
+        Portfolio này tổng hợp kiến thức, kỹ năng số và các dự án qua môn
+        <strong>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</strong>.
+      </p>
+
+      <!-- Thông tin liên hệ nhỏ -->
+      <div class="hero-contacts" data-aos="fade-up" data-aos-duration="900" data-aos-delay="260">
+        <a href="mailto:25020265@vnu.edu.vn" class="hero-contact-item" id="mailVnu">
+          <i class="fa-solid fa-envelope"></i>
+          <span>25020265@vnu.edu.vn</span>
+        </a>
+        <span class="hero-contact-divider" aria-hidden="true">·</span>
+        <a href="mailto:minhnguyen01062007@gmail.com" class="hero-contact-item" id="mailGmail">
+          <i class="fa-brands fa-google"></i>
+          <span>minhnguyen01062007@gmail.com</span>
+        </a>
+      </div>
+
+      <!-- Các nút CTA -->
+      <div class="hero-actions" data-aos="fade-up" data-aos-duration="900" data-aos-delay="320">
+        <a href="#projects" class="btn btn--primary" id="btnViewProjects">
+          <i class="fa-solid fa-folder-open"></i>
+          Xem Dự án
+        </a>
+        <a href="#" class="btn btn--outline" id="btnDownloadCV" download>
+          <i class="fa-solid fa-file-arrow-down"></i>
+          Tải CV
+        </a>
+      </div>
+
+      <!-- Khối Thống kê Metrics (4 cột ngang) -->
+      <div class="hero-metrics" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+        <div class="metric-item">
+          <div class="metric-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="metric-info">
+            <span class="metric-value">6</span>
+            <span class="metric-label">Nhiệm Vụ Thực Hành</span>
+          </div>
+        </div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item">
+          <div class="metric-icon metric-icon--orange">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div class="metric-info">
+            <span class="metric-value">Canva</span>
+            <span class="metric-label">Phát Triển Đa Phương Tiện</span>
+          </div>
+        </div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item">
+          <div class="metric-icon metric-icon--purple">
+            <i class="fa-solid fa-gavel"></i>
+          </div>
+          <div class="metric-info">
+            <span class="metric-value">BidHub</span>
+            <span class="metric-label">Dự Án Cá Nhân</span>
+          </div>
+        </div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item">
+          <div class="metric-icon metric-icon--cyan">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="metric-info">
+            <span class="metric-value">50+</span>
+            <span class="metric-label">Kịch Bản Prompt AI Tối Ưu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mũi tên cuộn xuống -->
+    <a href="#projects" class="scroll-indicator" aria-label="Cuộn xuống phần bài tập">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ========================================
+       PHẦN 2: PROJECTS SECTION (Bài tập môn học)
+  ======================================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Môn học</span>
+        <h2 class="section-title">Bài Tập Môn Học</h2>
+        <p class="section-subtitle">
+          6 bài tập thực hành trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo
+        </p>
+      </div>
+
+      <!-- Lưới thẻ dự án (CSS Grid) -->
+      <div class="projects-grid">
+
+        <!-- Thẻ Bài 1 -->
+        <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="card-icon card-icon--blue">
+              <i class="fa-solid fa-computer"></i>
+            </div>
+            <span class="card-number">01</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Máy tính và các thiết bị ngoại vi</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--blue">
+              <i class="fa-solid fa-layer-group"></i>
+              Tổ Chức Dữ Liệu
+            </div>
+            <p class="card-description">
+              Tìm hiểu tổng quan về cấu tạo máy tính, phân loại và chức năng của các thiết bị ngoại vi trong hệ thống
+              máy tính hiện đại.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Hardware</span>
+              <span class="tag">Peripheral</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="files/Bai1.docx" class="btn-card" download id="linkBai1">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Thẻ Bài 2 -->
+        <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="80">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="card-icon card-icon--purple">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <span class="card-number">02</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Khai thác dữ liệu và thông tin</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--purple">
+              <i class="fa-solid fa-microscope"></i>
+              Nghiên Cứu Học Thuật
+            </div>
+            <p class="card-description">
+              Khám phá các phương pháp tìm kiếm, lọc và khai thác dữ liệu từ nhiều nguồn khác nhau trong thời đại thông
+              tin số.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Data Mining</span>
+              <span class="tag">Information</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="files/Bai2.docx" class="btn-card" download id="linkBai2">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Thẻ Bài 3 -->
+        <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="160">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="card-icon card-icon--cyan">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <span class="card-number">03</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tổng quan về trí tuệ nhân tạo</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--cyan">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              Tối Ưu Prompt
+            </div>
+            <p class="card-description">
+              Tổng hợp kiến thức nền tảng về AI, lịch sử phát triển, các nhánh ứng dụng và tác động của trí tuệ nhân tạo
+              đến xã hội.
+            </p>
+            <div class="card-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="files/Bai3.docx" class="btn-card" download id="linkBai3">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Thẻ Bài 4 -->
+        <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="240">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="card-icon card-icon--green">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <span class="card-number">04</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Giao tiếp và hợp tác trong môi trường số</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--green">
+              <i class="fa-solid fa-handshake"></i>
+              Cộng Tác Trực Tuyến
+            </div>
+            <p class="card-description">
+              Kỹ năng làm việc nhóm, giao tiếp hiệu quả và sử dụng các công cụ cộng tác trực tuyến trong môi trường kỹ
+              thuật số.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Collaboration</span>
+              <span class="tag">Digital</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="files/Bai4.docx" class="btn-card" download id="linkBai4">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Thẻ Bài 5 — Có thêm nút Canva -->
+        <article class="project-card project-card--canva" data-aos="fade-up" data-aos-duration="700"
+          data-aos-delay="320">
+          <div class="card-glow" aria-hidden="true"></div>
+          <!-- Nhãn "Sản phẩm" nổi bật -->
+          <div class="card-label">
+            <i class="fa-solid fa-star"></i> Sản phẩm thiết kế
+          </div>
+          <div class="card-header">
+            <div class="card-icon card-icon--orange">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <span class="card-number">05</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Sáng tạo nội dung số</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--orange">
+              <i class="fa-solid fa-sparkles"></i>
+              Nội Dung Sinh Tạo
+            </div>
+            <p class="card-description">
+              Học cách tạo, biên tập và phân phối nội dung số có chất lượng trên các nền tảng kỹ thuật số và mạng xã
+              hội.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Content</span>
+              <span class="tag">Creative</span>
+              <span class="tag">Canva</span>
+            </div>
+          </div>
+          <div class="card-footer card-footer--col">
+            <!-- Nút tài liệu gốc -->
+            <a href="files/Bai5.docx" class="btn-card" download id="linkBai5">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <!-- Nút Canva với hiệu ứng gradient glow -->
+            <div class="canva-btns">
+              <a href="https://canva.link/m8ct7j0duriecfs" class="btn-canva" id="linkCanva1" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-solid fa-palette"></i>
+                Thiết kế Canva 01
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://canva.link/syrt6lf7h0a9niz" class="btn-canva btn-canva--2" id="linkCanva2"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-palette"></i>
+                Thiết kế Canva 02
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thẻ Bài 6 -->
+        <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+          <div class="card-glow" aria-hidden="true"></div>
+          <div class="card-header">
+            <div class="card-icon card-icon--red">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="card-number">06</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">An toàn và liêm chính học thuật trong môi trường số</h3>
+            <!-- Category Badge -->
+            <div class="card-category-badge card-category-badge--red">
+              <i class="fa-solid fa-scale-balanced"></i>
+              Liêm Chính AI
+            </div>
+            <p class="card-description">
+              Nhận thức về bảo mật thông tin, đạo đức số và tầm quan trọng của liêm chính học thuật trong thời đại AI.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Security</span>
+              <span class="tag">Ethics</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="files/Bai6.docx" class="btn-card" download id="linkBai6">
+              <i class="fa-solid fa-file-word"></i>
+              Xem tài liệu
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       PHẦN 3: SKILL MATRIX (Ma Trận Năng Lực)
+  ======================================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Năng lực</span>
+        <h2 class="section-title">Ma Trận Năng Lực</h2>
+        <p class="section-subtitle">Bức tranh toàn diện về kỹ năng chuyên môn, công cụ và tư duy đang được rèn luyện</p>
+      </div>
+
+      <div class="skill-matrix">
+
+        <!-- Cột 1: Chuyên Môn Lập Trình -->
+        <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="skill-matrix__header skill-matrix__header--blue">
+            <div class="skill-matrix__icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Chuyên Môn Lập Trình</h3>
+          </div>
+          <div class="skill-matrix__body">
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#ea580c; background:rgba(234,88,12,0.12);">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Java</span>
+                <span class="skill-matrix__item-desc">OOP, Multi-threading, Exception Handling</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#3b82f6; background:rgba(59,130,246,0.12);">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Python</span>
+                <span class="skill-matrix__item-desc">Scripting, Data Analysis, Automation</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#8b5cf6; background:rgba(139,92,246,0.12);">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Cấu trúc Dữ liệu & Thuật toán</span>
+                <span class="skill-matrix__item-desc">DSA — trọng tâm rèn luyện hiện tại</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 2: Nền Tảng & Công Cụ -->
+        <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="skill-matrix__header skill-matrix__header--orange">
+            <div class="skill-matrix__icon">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h3>Nền Tảng & Công Cụ</h3>
+          </div>
+          <div class="skill-matrix__body">
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#06b6d4; background:rgba(6,182,212,0.12);">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Generative AI</span>
+                <span class="skill-matrix__item-desc">Prompt Engineering, ChatGPT, Gemini</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#f59e0b; background:rgba(245,158,11,0.12);">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Canva</span>
+                <span class="skill-matrix__item-desc">Thiết kế đồ họa & nội dung số</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#f97316; background:rgba(249,115,22,0.12);">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Git/GitHub Workspace</span>
+                <span class="skill-matrix__item-desc">Version Control, Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 3: Quản Trị & Tư Duy -->
+        <div class="skill-matrix__col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="skill-matrix__header skill-matrix__header--green">
+            <div class="skill-matrix__icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Quản Trị & Tư Duy</h3>
+          </div>
+          <div class="skill-matrix__body">
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#10b981; background:rgba(16,185,129,0.12);">
+                <i class="fa-solid fa-sitemap"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Tư duy Hệ thống</span>
+                <span class="skill-matrix__item-desc">Kiến trúc phần mềm, phân tích toàn diện</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#8b5cf6; background:rgba(139,92,246,0.12);">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Phối hợp Nhóm</span>
+                <span class="skill-matrix__item-desc">Agile mindset, giao tiếp rõ ràng</span>
+              </div>
+            </div>
+            <div class="skill-matrix__item">
+              <div class="skill-matrix__item-icon" style="color:#ef4444; background:rgba(239,68,68,0.12);">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div class="skill-matrix__item-info">
+                <span class="skill-matrix__item-name">Đạo đức Không gian Số</span>
+                <span class="skill-matrix__item-desc">Liêm chính học thuật, AI có trách nhiệm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /skill-matrix -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       PHẦN 4: AI ETHICS SECTION (Bộ Quy Tắc Sử Dụng AI Trách Nhiệm)
+  ======================================== -->
+  <section class="ai-ethics" id="ai-ethics">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag section-tag--red">Đạo đức AI</span>
+        <h2 class="section-title">Bộ Quy Tắc Sử Dụng AI Trách Nhiệm</h2>
+        <p class="section-subtitle">
+          3 nguyên tắc cốt lõi định hướng cách tôi tiếp cận và ứng dụng Trí tuệ Nhân tạo
+        </p>
+      </div>
+
+      <div class="ethics-grid">
+
+        <!-- Nguyên tắc 1 -->
+        <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="ethics-card__glow ethics-card__glow--blue" aria-hidden="true"></div>
+          <div class="ethics-card__icon ethics-card__icon--blue">
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div class="ethics-card__number">01</div>
+          <h3 class="ethics-card__title">Ưu Tiên Tư Duy Con Người</h3>
+          <p class="ethics-card__subtitle">Human-in-the-loop</p>
+          <p class="ethics-card__desc">
+            AI là công cụ hỗ trợ, không thay thế tư duy. Mọi kết quả từ AI đều được xem xét, đánh giá và quyết định bởi con người trước khi áp dụng. Giữ vững tư duy phản biện và tự chủ nhận thức.
+          </p>
+          <div class="ethics-card__tags">
+            <span class="ethics-tag">Critical Thinking</span>
+            <span class="ethics-tag">Human Oversight</span>
+          </div>
+        </div>
+
+        <!-- Nguyên tắc 2 -->
+        <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="ethics-card__glow ethics-card__glow--purple" aria-hidden="true"></div>
+          <div class="ethics-card__icon ethics-card__icon--purple">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <div class="ethics-card__number">02</div>
+          <h3 class="ethics-card__title">Minh Bạch Nguồn Tham Khảo</h3>
+          <p class="ethics-card__subtitle">Transparency & Attribution</p>
+          <p class="ethics-card__desc">
+            Luôn ghi rõ nguồn tham khảo, công nhận sự đóng góp của AI trong quá trình tạo ra nội dung. Không sử dụng AI để che giấu nguồn gốc thông tin hoặc làm sai lệch sự thật.
+          </p>
+          <div class="ethics-card__tags">
+            <span class="ethics-tag">Attribution</span>
+            <span class="ethics-tag">Honesty</span>
+          </div>
+        </div>
+
+        <!-- Nguyên tắc 3 -->
+        <div class="ethics-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <div class="ethics-card__glow ethics-card__glow--green" aria-hidden="true"></div>
+          <div class="ethics-card__icon ethics-card__icon--green">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <div class="ethics-card__number">03</div>
+          <h3 class="ethics-card__title">Xác Thực Dữ Liệu Chéo</h3>
+          <p class="ethics-card__subtitle">Cross-Validation</p>
+          <p class="ethics-card__desc">
+            Không tin tưởng mù quáng vào kết quả AI. Mọi thông tin quan trọng đều được kiểm chứng từ nhiều nguồn độc lập, đặc biệt là các nguồn học thuật uy tín và có thể truy xuất.
+          </p>
+          <div class="ethics-card__tags">
+            <span class="ethics-tag">Fact-Checking</span>
+            <span class="ethics-tag">Verification</span>
+          </div>
+        </div>
+
+      </div><!-- /ethics-grid -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       PHẦN 5: PERSONAL PROJECTS SECTION
+  ======================================== -->
+  <section class="personal" id="personal">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Cá nhân</span>
+        <h2 class="section-title">Dự Án Cá Nhân</h2>
+        <p class="section-subtitle">Những dự án được xây dựng ngoài chương trình học, thể hiện đam mê lập trình</p>
+      </div>
+
+      <!-- Card dự án cá nhân nổi bật -->
+      <div class="personal-grid">
+
+        <!-- BidHub Card -->
+        <article class="personal-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="personal-card__glow" aria-hidden="true"></div>
+
+          <!-- Header -->
+          <div class="personal-card__header">
+            <div class="personal-card__icon">
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+            <div class="personal-card__meta">
+              <span class="personal-card__tag">Back-end</span>
+              <span class="personal-card__status">
+                <i class="fa-solid fa-circle"></i> In Development
+              </span>
+            </div>
+          </div>
+
+          <!-- Tên dự án -->
+          <h3 class="personal-card__title">
+            BidHub
+            <span class="personal-card__subtitle">— Hệ thống đấu giá trực tuyến</span>
+          </h3>
+
+          <!-- Mô tả -->
+          <p class="personal-card__description">
+            Phát triển hệ thống back-end hoàn chỉnh cho nền tảng đấu giá trực tuyến. Dự án áp dụng lập trình
+            <strong>đa luồng (Multi-threading)</strong> để xử lý nhiều phiên đấu giá đồng thời, kết hợp
+            <strong>Exception Handling</strong> chặt chẽ nhằm đảm bảo tính ổn định và bảo mật cao cho toàn hệ thống.
+          </p>
+
+          <!-- Stack kỹ thuật -->
+          <div class="personal-card__stack">
+            <span class="stack-item stack-item--java">
+              <i class="fa-brands fa-java"></i> Java
+            </span>
+            <span class="stack-item stack-item--thread">
+              <i class="fa-solid fa-microchip"></i> Multi-threading
+            </span>
+            <span class="stack-item stack-item--exc">
+              <i class="fa-solid fa-triangle-exclamation"></i> Exception Handling
+            </span>
+            <span class="stack-item stack-item--oop">
+              <i class="fa-solid fa-cubes"></i> OOP
+            </span>
+          </div>
+
+          <!-- Tính năng highlights -->
+          <ul class="personal-card__features">
+            <li><i class="fa-solid fa-check-circle"></i> Quản lý phiên đấu giá theo thời gian thực</li>
+            <li><i class="fa-solid fa-check-circle"></i> Xử lý đồng thời nhiều người dùng với đa luồng</li>
+            <li><i class="fa-solid fa-check-circle"></i> Hệ thống xác thực và phân quyền người dùng</li>
+          </ul>
+
+          <!-- Footer: link dự án -->
+          <div class="personal-card__footer">
+            <a href="https://github.com/minh2007afk" class="btn-personal" id="linkBidHub" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i>
+              Xem trên GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /personal-grid -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       PHẦN 6: REFLECTION SECTION — Nhìn Lại Hành Trình (Retrospective 2x2)
+  ======================================== -->
+  <section class="reflection" id="reflection">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Nhìn lại</span>
+        <h2 class="section-title">Nhìn Lại Hành Trình</h2>
+        <p class="section-subtitle">
+          Retrospective — Những gì đã học, đã trưởng thành và bài học mang theo
+        </p>
+      </div>
+
+      <div class="reflection-content">
+
+        <!-- Trích dẫn nổi bật -->
+        <blockquote class="reflection-quote" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <i class="fa-solid fa-quote-left quote-icon" aria-hidden="true"></i>
+          <p>
+            "Hành trình học tập này không chỉ mang lại cho tôi kiến thức về công nghệ,
+            mà còn rèn giũa kỹ năng tư duy số và ý thức trách nhiệm khi sử dụng AI."
+          </p>
+          <footer>— Nguyễn Công Minh</footer>
+        </blockquote>
+
+        <!-- Grid 2x2 Retrospective -->
+        <div class="retro-grid">
+
+          <!-- Ô 1: Bài Học Xuyên Suốt -->
+          <div class="retro-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="150">
+            <div class="retro-card__header">
+              <div class="retro-card__icon retro-card__icon--blue">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <span class="retro-card__label">01</span>
+            </div>
+            <h3 class="retro-card__title">Bài Học Xuyên Suốt</h3>
+            <p class="retro-card__text">
+              Công nghệ chỉ là công cụ — tư duy mới là nền tảng. Dù làm việc với Java, AI hay Canva, điều quan trọng nhất là khả năng đặt câu hỏi đúng, phân tích hệ thống và lựa chọn giải pháp phù hợp. Môn học giúp tôi hiểu rằng lập trình không chỉ là viết code mà là giải quyết vấn đề một cách có hệ thống và đạo đức.
+            </p>
+          </div>
+
+          <!-- Ô 2: Năng Lực Được Nâng Cấp -->
+          <div class="retro-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+            <div class="retro-card__header">
+              <div class="retro-card__icon retro-card__icon--purple">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <span class="retro-card__label">02</span>
+            </div>
+            <h3 class="retro-card__title">Năng Lực Được Nâng Cấp</h3>
+            <p class="retro-card__text">
+              Từ chỗ chưa biết Prompt Engineering, tôi đã tối ưu hóa 50+ kịch bản prompt để khai thác hiệu quả các mô hình AI. Kỹ năng thiết kế với Canva từ con số 0 nay đã tạo ra 2 sản phẩm hoàn chỉnh. Quan trọng hơn, tôi xây dựng được tư duy đánh giá thông tin đa chiều — luôn kiểm chứng chéo trước khi tin tưởng bất kỳ nguồn nào.
+            </p>
+          </div>
+
+          <!-- Ô 3: Khám Phá Ấn Tượng Nhất -->
+          <div class="retro-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="250">
+            <div class="retro-card__header">
+              <div class="retro-card__icon retro-card__icon--orange">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span class="retro-card__label">03</span>
+            </div>
+            <h3 class="retro-card__title">Khám Phá Ấn Tượng Nhất</h3>
+            <p class="retro-card__text">
+              Điều ấn tượng nhất là khả năng của Multi-threading trong Java khi xây dựng BidHub — việc hàng chục phiên đấu giá chạy song song mà không xung đột dữ liệu là minh chứng rõ ràng cho sức mạnh của lập trình đồng thời. Bên cạnh đó, việc một mô hình AI tạo ra code hoàn chỉnh trong vài giây khiến tôi nhận ra AI không thay thế developer mà sẽ tạo ra những developer siêu năng lực.
+            </p>
+          </div>
+
+          <!-- Ô 4: Khó Khăn & Cách Giải Quyết -->
+          <div class="retro-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+            <div class="retro-card__header">
+              <div class="retro-card__icon retro-card__icon--red">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <span class="retro-card__label">04</span>
+            </div>
+            <h3 class="retro-card__title">Khó Khăn & Cách Giải Quyết</h3>
+            <p class="retro-card__text">
+              Thách thức lớn nhất là Race Condition trong BidHub khi nhiều luồng truy cập đồng thời vào một phiên đấu giá. Giải pháp: sử dụng <code>synchronized</code> và <code>ReentrantLock</code> để kiểm soát truy cập. Thách thức thứ hai là hallucination từ AI khi research — khắc phục bằng cách luôn xác thực chéo với Google Scholar và tài liệu chính thức trước khi dùng bất kỳ thông tin nào.
+            </p>
+          </div>
+
+        </div><!-- /retro-grid -->
+      </div><!-- /reflection-content -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       FOOTER (Liên kết & Thông tin liên hệ)
+  ======================================== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+
+      <!-- Phần trên footer -->
+      <div class="footer-top" data-aos="fade-up" data-aos-duration="800">
+        <div class="footer-brand">
+          <span class="brand-icon">&lt;/&gt;</span>
+          <h2>Nguyễn Công Minh</h2>
+          <p>MSV: 25020265 &nbsp;·&nbsp; CNTT — UET, ĐHQGHN</p>
+          <!-- Email trong footer -->
+          <div class="footer-emails">
+            <a href="mailto:25020265@vnu.edu.vn" class="footer-email-link" id="footerMailVnu">
+              <i class="fa-solid fa-envelope"></i> 25020265@vnu.edu.vn
+            </a>
+            <a href="mailto:minhnguyen01062007@gmail.com" class="footer-email-link" id="footerMailGmail">
+              <i class="fa-brands fa-google"></i> minhnguyen01062007@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Liên kết mạng xã hội -->
+        <div class="footer-social">
+          <p class="footer-social__label">Kết nối với tôi</p>
+          <div class="social-links">
+            <a href="https://github.com/minh2007afk" class="social-link social-link--github" id="linkGithub"
+              target="_blank" rel="noopener noreferrer" aria-label="GitHub của Nguyễn Công Minh">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:25020265@vnu.edu.vn" class="social-link social-link--email" id="linkEmail"
+              aria-label="Gửi email cho Nguyễn Công Minh">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Đường kẻ ngang -->
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <!-- Phần dưới footer -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nguyễn Công Minh. Được xây dựng với <i class="fa-solid fa-heart" aria-hidden="true"
+            style="color: #f87171;"></i> bằng HTML, CSS &amp; JavaScript.</p>
+        <p class="footer-course">Môn: Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</p>
+      </div>
+
+    </div><!-- /container -->
+  </footer>
+
+  <!-- ========================================
+       NÚT CUỘN LÊN ĐẦU TRANG (Scroll to Top)
+  ======================================== -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Cuộn lên đầu trang">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- File JavaScript chính -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
