@@ -30,8 +30,14 @@
 <body>
 
   <!-- ========================================
+       BỌT BONG BÓNG TOÀN TRANG (Global Particles)
+  ======================================== -->
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <!-- ========================================
        NAVIGATION BAR (Thanh điều hướng cố định)
   ======================================== -->
+
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <!-- Logo / Brand -->
@@ -64,59 +70,90 @@
   ======================================== -->
   <section class="hero" id="hero">
 
-    <!-- Các hạt nền trang trí (animated particles) -->
-    <div class="particles" id="particles" aria-hidden="true"></div>
-
     <!-- Vòng tròn phát sáng nền -->
     <div class="glow-orb glow-orb--1" aria-hidden="true"></div>
     <div class="glow-orb glow-orb--2" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <!-- Badge giới thiệu -->
-      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
-        <i class="fa-solid fa-graduation-cap"></i>
-        <span>UET — ĐHQGHN &nbsp;·&nbsp; MSV: 25020265 &nbsp;·&nbsp; <i class="fa-solid fa-hashtag" style="font-size:0.8em;"></i> VNU1001_E252014</span>
-      </div>
+      <div class="hero-main-layout">
+        <div class="hero-text-side">
+          <!-- Badge giới thiệu -->
+          <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>UET — ĐHQGHN &nbsp;·&nbsp; MSV: 25020265 &nbsp;·&nbsp; <i class="fa-solid fa-hashtag"
+                style="font-size:0.8em;"></i> VNU1001_E252014</span>
+          </div>
 
-      <!-- Tiêu đề chính -->
-      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
-        Xin chào, tôi là
-        <span class="hero-name">Nguyễn Công Minh</span>
-      </h1>
+          <!-- Tiêu đề chính -->
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+            Xin chào, tôi là
+            <span class="hero-name">Nguyễn Công Minh</span>
+          </h1>
 
-      <!-- Tagline -->
-      <p class="hero-tagline" data-aos="fade-up" data-aos-duration="900" data-aos-delay="160">
-        <i class="fa-solid fa-quote-left"></i>
-        Theo đuổi Đam mê Kiến trúc Phần mềm, Xử lý Đa luồng và Ứng dụng Trí tuệ Nhân tạo Trách nhiệm.
-        <i class="fa-solid fa-quote-right"></i>
-      </p>
+          <!-- Tagline -->
+          <p class="hero-tagline" data-aos="fade-up" data-aos-duration="900" data-aos-delay="160">
+            <i class="fa-solid fa-quote-left"></i>
+            Theo đuổi Đam mê Kiến trúc Phần mềm, Xử lý Đa luồng và Ứng dụng Trí tuệ Nhân tạo Trách nhiệm.
+            <i class="fa-solid fa-quote-right"></i>
+          </p>
 
-      <!-- Mô tả ngắn -->
-      <p class="hero-description" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
-        Sinh viên ngành <strong>Công nghệ Thông tin</strong>, Trường Đại học Công nghệ (UET) — ĐHQGHN.
-        Portfolio này tổng hợp kiến thức, kỹ năng số và các dự án qua môn
-        <strong>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</strong>.
-      </p>
+          <!-- Mô tả ngắn -->
+          <p class="hero-description" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+            Sinh viên ngành <strong>Công nghệ Thông tin</strong>, Trường Đại học Công nghệ (UET) — ĐHQGHN.
+            Portfolio này tổng hợp kiến thức, kỹ năng số và các dự án qua môn
+            <strong>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</strong>.
+          </p>
 
-      <!-- Thông tin liên hệ nhỏ -->
-      <div class="hero-contacts" data-aos="fade-up" data-aos-duration="900" data-aos-delay="260">
-        <a href="mailto:25020265@vnu.edu.vn" class="hero-contact-item" id="mailVnu">
-          <i class="fa-solid fa-envelope"></i>
-          <span>25020265@vnu.edu.vn</span>
-        </a>
-        <span class="hero-contact-divider" aria-hidden="true">·</span>
-        <a href="mailto:minhnguyen01062007@gmail.com" class="hero-contact-item" id="mailGmail">
-          <i class="fa-brands fa-google"></i>
-          <span>minhnguyen01062007@gmail.com</span>
-        </a>
-      </div>
+          <!-- Thông tin liên hệ nhỏ -->
+          <div class="hero-contacts" data-aos="fade-up" data-aos-duration="900" data-aos-delay="260">
+            <a href="mailto:25020265@vnu.edu.vn" class="hero-contact-item" id="mailVnu">
+              <i class="fa-solid fa-envelope"></i>
+              <span>25020265@vnu.edu.vn</span>
+            </a>
+            <span class="hero-contact-divider" aria-hidden="true">·</span>
+            <a href="mailto:minhnguyen01062007@gmail.com" class="hero-contact-item" id="mailGmail">
+              <i class="fa-brands fa-google"></i>
+              <span>minhnguyen01062007@gmail.com</span>
+            </a>
+          </div>
 
-      <!-- Các nút CTA -->
-      <div class="hero-actions" data-aos="fade-up" data-aos-duration="900" data-aos-delay="320">
-        <a href="#projects" class="btn btn--primary" id="btnViewProjects">
-          <i class="fa-solid fa-folder-open"></i>
-          Xem Dự án
-        </a>
+          <!-- Các nút CTA -->
+          <div class="hero-actions" data-aos="fade-up" data-aos-duration="900" data-aos-delay="320">
+            <a href="#projects" class="btn btn--primary" id="btnViewProjects">
+              <i class="fa-solid fa-folder-open"></i>
+              Xem Dự án
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-side" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+          <div class="avatar-wrapper">
+            <!-- Các badge kỹ năng nổi xung quanh -->
+            <div class="avatar-badge avatar-badge--tl">
+              <i class="fa-brands fa-java"></i>
+              <span>Java</span>
+            </div>
+            <div class="avatar-badge avatar-badge--tr">
+              <i class="fa-solid fa-robot"></i>
+              <span>AI Dev</span>
+            </div>
+            <div class="avatar-badge avatar-badge--bl">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="avatar-badge avatar-badge--br">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </div>
+            <!-- Vòng tròn quay xung quanh -->
+            <div class="avatar-ring avatar-ring--outer" aria-hidden="true"></div>
+            <div class="avatar-ring avatar-ring--inner" aria-hidden="true"></div>
+            <!-- Khung ảnh chính -->
+            <div class="avatar-frame">
+              <img src="avatar.png" alt="Nguyễn Công Minh" class="avatar-img" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Khối Thống kê Metrics (4 cột ngang) -->
@@ -579,7 +616,8 @@
           <h3 class="ethics-card__title">Ưu Tiên Tư Duy Con Người</h3>
           <p class="ethics-card__subtitle">Human-in-the-loop</p>
           <p class="ethics-card__desc">
-            AI là công cụ hỗ trợ, không thay thế tư duy. Mọi kết quả từ AI đều được xem xét, đánh giá và quyết định bởi con người trước khi áp dụng. Giữ vững tư duy phản biện và tự chủ nhận thức.
+            AI là công cụ hỗ trợ, không thay thế tư duy. Mọi kết quả từ AI đều được xem xét, đánh giá và quyết định bởi
+            con người trước khi áp dụng. Giữ vững tư duy phản biện và tự chủ nhận thức.
           </p>
           <div class="ethics-card__tags">
             <span class="ethics-tag">Critical Thinking</span>
@@ -597,7 +635,8 @@
           <h3 class="ethics-card__title">Minh Bạch Nguồn Tham Khảo</h3>
           <p class="ethics-card__subtitle">Transparency & Attribution</p>
           <p class="ethics-card__desc">
-            Luôn ghi rõ nguồn tham khảo, công nhận sự đóng góp của AI trong quá trình tạo ra nội dung. Không sử dụng AI để che giấu nguồn gốc thông tin hoặc làm sai lệch sự thật.
+            Luôn ghi rõ nguồn tham khảo, công nhận sự đóng góp của AI trong quá trình tạo ra nội dung. Không sử dụng AI
+            để che giấu nguồn gốc thông tin hoặc làm sai lệch sự thật.
           </p>
           <div class="ethics-card__tags">
             <span class="ethics-tag">Attribution</span>
@@ -615,7 +654,8 @@
           <h3 class="ethics-card__title">Xác Thực Dữ Liệu Chéo</h3>
           <p class="ethics-card__subtitle">Cross-Validation</p>
           <p class="ethics-card__desc">
-            Không tin tưởng mù quáng vào kết quả AI. Mọi thông tin quan trọng đều được kiểm chứng từ nhiều nguồn độc lập, đặc biệt là các nguồn học thuật uy tín và có thể truy xuất.
+            Không tin tưởng mù quáng vào kết quả AI. Mọi thông tin quan trọng đều được kiểm chứng từ nhiều nguồn độc
+            lập, đặc biệt là các nguồn học thuật uy tín và có thể truy xuất.
           </p>
           <div class="ethics-card__tags">
             <span class="ethics-tag">Fact-Checking</span>
@@ -751,7 +791,9 @@
             </div>
             <h3 class="retro-card__title">Bài Học Xuyên Suốt</h3>
             <p class="retro-card__text">
-              Công nghệ chỉ là công cụ — tư duy mới là nền tảng. Dù làm việc với Java, AI hay Canva, điều quan trọng nhất là khả năng đặt câu hỏi đúng, phân tích hệ thống và lựa chọn giải pháp phù hợp. Môn học giúp tôi hiểu rằng lập trình không chỉ là viết code mà là giải quyết vấn đề một cách có hệ thống và đạo đức.
+              Công nghệ chỉ là công cụ — tư duy mới là nền tảng. Dù làm việc với Java, AI hay Canva, điều quan trọng
+              nhất là khả năng đặt câu hỏi đúng, phân tích hệ thống và lựa chọn giải pháp phù hợp. Môn học giúp tôi hiểu
+              rằng lập trình không chỉ là viết code mà là giải quyết vấn đề một cách có hệ thống và đạo đức.
             </p>
           </div>
 
@@ -765,7 +807,10 @@
             </div>
             <h3 class="retro-card__title">Năng Lực Được Nâng Cấp</h3>
             <p class="retro-card__text">
-              Từ chỗ chưa biết Prompt Engineering, tôi đã tối ưu hóa 50+ kịch bản prompt để khai thác hiệu quả các mô hình AI. Kỹ năng thiết kế với Canva từ con số 0 nay đã tạo ra 2 sản phẩm hoàn chỉnh. Quan trọng hơn, tôi xây dựng được tư duy đánh giá thông tin đa chiều — luôn kiểm chứng chéo trước khi tin tưởng bất kỳ nguồn nào.
+              Từ chỗ chưa biết Prompt Engineering, tôi đã tối ưu hóa 50+ kịch bản prompt để khai thác hiệu quả các mô
+              hình AI. Kỹ năng thiết kế với Canva từ con số 0 nay đã tạo ra 2 sản phẩm hoàn chỉnh. Quan trọng hơn, tôi
+              xây dựng được tư duy đánh giá thông tin đa chiều — luôn kiểm chứng chéo trước khi tin tưởng bất kỳ nguồn
+              nào.
             </p>
           </div>
 
@@ -779,7 +824,10 @@
             </div>
             <h3 class="retro-card__title">Khám Phá Ấn Tượng Nhất</h3>
             <p class="retro-card__text">
-              Điều ấn tượng nhất là khả năng của Multi-threading trong Java khi xây dựng BidHub — việc hàng chục phiên đấu giá chạy song song mà không xung đột dữ liệu là minh chứng rõ ràng cho sức mạnh của lập trình đồng thời. Bên cạnh đó, việc một mô hình AI tạo ra code hoàn chỉnh trong vài giây khiến tôi nhận ra AI không thay thế developer mà sẽ tạo ra những developer siêu năng lực.
+              Điều ấn tượng nhất là khả năng của Multi-threading trong Java khi xây dựng BidHub — việc hàng chục phiên
+              đấu giá chạy song song mà không xung đột dữ liệu là minh chứng rõ ràng cho sức mạnh của lập trình đồng
+              thời. Bên cạnh đó, việc một mô hình AI tạo ra code hoàn chỉnh trong vài giây khiến tôi nhận ra AI không
+              thay thế developer mà sẽ tạo ra những developer siêu năng lực.
             </p>
           </div>
 
@@ -793,7 +841,10 @@
             </div>
             <h3 class="retro-card__title">Khó Khăn & Cách Giải Quyết</h3>
             <p class="retro-card__text">
-              Thách thức lớn nhất là Race Condition trong BidHub khi nhiều luồng truy cập đồng thời vào một phiên đấu giá. Giải pháp: sử dụng <code>synchronized</code> và <code>ReentrantLock</code> để kiểm soát truy cập. Thách thức thứ hai là hallucination từ AI khi research — khắc phục bằng cách luôn xác thực chéo với Google Scholar và tài liệu chính thức trước khi dùng bất kỳ thông tin nào.
+              Thách thức lớn nhất là Race Condition trong BidHub khi nhiều luồng truy cập đồng thời vào một phiên đấu
+              giá. Giải pháp: sử dụng <code>synchronized</code> và <code>ReentrantLock</code> để kiểm soát truy cập.
+              Thách thức thứ hai là hallucination từ AI khi research — khắc phục bằng cách luôn xác thực chéo với Google
+              Scholar và tài liệu chính thức trước khi dùng bất kỳ thông tin nào.
             </p>
           </div>
 

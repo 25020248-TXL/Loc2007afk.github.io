@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Khởi tạo AOS với cấu hình tùy chỉnh
   AOS.init({
-    duration:  800,       // Thời gian animation (ms)
-    once:      true,      // Chỉ chạy animation 1 lần khi phần tử xuất hiện
-    offset:    80,        // Khoảng cách từ mép viewport để kích hoạt animation
-    easing:    'ease-out-cubic', // Hàm easing mượt mà
+    duration: 800,       // Thời gian animation (ms)
+    once: false,         // Chạy animation mỗi khi cuộn đến phần tử
+    mirror: true,        // Animate elements out while scrolling past them
+    offset: 80,          // Khoảng cách từ mép viewport để kích hoạt animation
+    easing: 'ease-out-cubic', // Hàm easing mượt mà
   });
 
   /* ============================================================
@@ -43,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
      3. ACTIVE NAV LINK - Highlight link theo section đang xem
      ============================================================ */
-  const sections  = document.querySelectorAll('section[id], footer[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id], footer[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
   // Dùng IntersectionObserver để theo dõi section nào đang hiện trên màn hình
   const sectionObserver = new IntersectionObserver((entries) => {
@@ -70,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
      4. HAMBURGER MENU - Menu mobile
      ============================================================ */
   const hamburgerBtn = document.getElementById('hamburger');
-  const navLinksEl   = document.getElementById('navLinks');
+  const navLinksEl = document.getElementById('navLinks');
 
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = navLinksEl.classList.toggle('open');
@@ -120,26 +121,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ============================================================
-     6. PARTICLES GENERATOR - Tạo hạt trang trí nền Hero
+     6. PARTICLES GENERATOR - Bọt bong bóng toàn trang
      ============================================================ */
   const particlesContainer = document.getElementById('particles');
 
-  // Số lượng hạt cần tạo
-  const PARTICLE_COUNT = 28;
+  // Tăng số lượng hạt để phủ toàn trang
+  const PARTICLE_COUNT = 55;
 
-  // Màu sắc các hạt (dùng màu accent)
+  // Màu sắc các hạt (đa dạng hơn)
   const PARTICLE_COLORS = [
     'rgba(59,130,246,',   // blue
     'rgba(139,92,246,',   // purple
     'rgba(6,182,212,',    // cyan
     'rgba(16,185,129,',   // green
+    'rgba(236,72,153,',   // pink
+    'rgba(245,158,11,',   // amber
   ];
 
   /**
    * Tạo ngẫu nhiên một số trong khoảng [min, max]
-   * @param {number} min
-   * @param {number} max
-   * @returns {number}
    */
   function randomBetween(min, max) {
     return Math.random() * (max - min) + min;
@@ -147,39 +147,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Tạo từng hạt và thêm vào container
   for (let i = 0; i < PARTICLE_COUNT; i++) {
-    const particle  = document.createElement('div');
+    const particle = document.createElement('div');
     particle.className = 'particle';
 
-    // Kích thước hạt ngẫu nhiên (3px - 10px)
-    const size    = randomBetween(3, 10);
+    // Kích thước hạt ngẫu nhiên (4px - 14px)
+    const size = randomBetween(4, 14);
     // Màu ngẫu nhiên
-    const color   = PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)];
+    const color = PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)];
     // Độ mờ ngẫu nhiên
-    const opacity = randomBetween(0.2, 0.6);
-    // Thời gian animation ngẫu nhiên (6s - 14s)
-    const duration = randomBetween(6, 14);
+    const opacity = randomBetween(0.15, 0.5);
+    // Thời gian bay từ dưới lên (8s - 18s)
+    const duration = randomBetween(8, 18);
     // Delay ngẫu nhiên để các hạt không đồng bộ
-    const delay    = randomBetween(0, duration);
+    const delay = randomBetween(0, duration);
+    // Độ lệch ngang (lắc sang trái/phải)
+    const drift = randomBetween(-40, 40);
 
-    // Vị trí ngẫu nhiên trên chiều ngang (%)
-    const posX = randomBetween(5, 95);
-    // Vị trí bắt đầu ngẫu nhiên theo chiều dọc
-    const posY = randomBetween(20, 90);
+    // Vị trí ngang ngẫu nhiên trên toàn chiều rộng
+    const posX = randomBetween(2, 98);
 
-    // Áp dụng style qua CSS Custom Properties
+    // Áp dụng style
     particle.style.cssText = `
       width: ${size}px;
       height: ${size}px;
       background: ${color}${opacity});
       left: ${posX}%;
-      top: ${posY}%;
       --duration: ${duration}s;
       --delay: -${delay}s;
       --opacity: ${opacity};
+      --drift: ${drift}px;
     `;
 
     particlesContainer.appendChild(particle);
   }
+
 
   /* ============================================================
      7. SMOOTH HOVER EFFECT cho project cards (hiệu ứng theo chuột)
@@ -188,10 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   projectCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
-      const rect   = card.getBoundingClientRect();
+      const rect = card.getBoundingClientRect();
       // Tính toán vị trí chuột tương đối so với card (từ -0.5 đến 0.5)
-      const x = (e.clientX - rect.left) / rect.width  - 0.5;
-      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
 
       // Áp dụng hiệu ứng nghiêng nhẹ theo hướng chuột (tilt effect)
       card.style.transform = `
@@ -219,15 +220,15 @@ document.addEventListener('DOMContentLoaded', () => {
    * @param {number} duration - Thời gian animation (ms)
    */
   function animateCounter(el, target, duration = 1200) {
-    const start     = 0;
+    const start = 0;
     const startTime = performance.now();
 
     function update(currentTime) {
-      const elapsed  = currentTime - startTime;
+      const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       // Hàm easing: ease-out
-      const eased    = 1 - Math.pow(1 - progress, 3);
-      const current  = Math.round(start + (target - start) * eased);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (target - start) * eased);
 
       el.textContent = current;
 
