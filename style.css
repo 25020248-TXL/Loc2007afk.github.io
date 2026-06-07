@@ -2290,13 +2290,8 @@ footer {
   border-radius: 50%;
   object-fit: cover;
   object-position: top center;
-  border: 2px solid transparent;
-  background: var(--gradient-primary) border-box;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+  padding: 2px;
+  background: var(--gradient-primary);
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
   transition: box-shadow var(--transition-fast), transform var(--transition-fast);
 }
