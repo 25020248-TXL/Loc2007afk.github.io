@@ -42,18 +42,20 @@
     <div class="nav-container">
       <!-- Logo / Brand -->
       <a href="#hero" class="nav-brand">
-        <span class="brand-icon">&lt;/&gt;</span>
-        <span>NCM</span>
+        <img src="avatar.png" alt="NCM" class="nav-avatar" />
+        <span>Nguyễn Công Minh</span>
       </a>
 
       <!-- Menu điều hướng desktop -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link">Về tôi</a></li>
         <li><a href="#projects" class="nav-link">Môn học</a></li>
         <li><a href="#skills" class="nav-link">Năng lực</a></li>
         <li><a href="#ai-ethics" class="nav-link">Đạo đức AI</a></li>
         <li><a href="#personal" class="nav-link">Dự án cá nhân</a></li>
         <li><a href="#reflection" class="nav-link">Nhìn lại</a></li>
+        <li><a href="#summary" class="nav-link">Tổng kết</a></li>
       </ul>
 
       <!-- Nút hamburger cho mobile -->
@@ -204,6 +206,140 @@
     <a href="#projects" class="scroll-indicator" aria-label="Cuộn xuống phần bài tập">
       <i class="fa-solid fa-chevron-down"></i>
     </a>
+  </section>
+
+  <!-- ========================================
+       PHẦN 1.5: ABOUT SECTION (Giới thiệu bản thân)
+  ======================================== -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <!-- Tiêu đề section -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag section-tag--pink">Về tôi</span>
+        <h2 class="section-title">Giới thiệu bản thân</h2>
+        <p class="section-subtitle">Chào mừng bạn đến với không gian học thuật của mình!</p>
+      </div>
+
+      <!-- Grid 2 cột -->
+      <div class="about-grid">
+
+        <!-- Thẻ trái: Thông tin cá nhân -->
+        <div class="about-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+          <div class="about-card__icon-wrap">
+            <i class="fa-solid fa-id-card"></i>
+          </div>
+          <h3 class="about-card__title">Thông tin cá nhân</h3>
+          <div class="about-info-list">
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-user"></i> Họ và tên</span>
+              <span class="about-info-value about-info-value--accent">Nguyễn Công Minh</span>
+            </div>
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-id-badge"></i> Mã sinh viên</span>
+              <span class="about-info-value">25020265</span>
+            </div>
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-users"></i> Lớp</span>
+              <span class="about-info-value">QH-2025-I/IT1</span>
+            </div>
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-book"></i> Môn học</span>
+              <span class="about-info-value">VNU1001_E252014</span>
+            </div>
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-graduation-cap"></i> Chuyên ngành</span>
+              <span class="about-info-value">Công nghệ Thông tin</span>
+            </div>
+            <div class="about-info-row">
+              <span class="about-info-label"><i class="fa-solid fa-heart"></i> Sở thích</span>
+              <span class="about-info-value">Lập trình, khám phá AI, nghe nhạc, đọc sách công nghệ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thẻ phải: Tiểu sử ngắn -->
+        <div class="about-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+          <div class="about-card__icon-wrap about-card__icon-wrap--cyan">
+            <i class="fa-solid fa-comment-dots"></i>
+          </div>
+          <h3 class="about-card__title">Tiểu sử ngắn</h3>
+          <p class="about-bio">
+            Xin chào! Mình là <strong>Nguyễn Công Minh</strong>, sinh viên năm nhất ngành Công nghệ Thông tin
+            tại <strong>Đại học Công nghệ (UET) — ĐHQGHN</strong>. Mình tin rằng
+            lập trình và trí tuệ nhân tạo có thể cùng nhau tạo nên những điều kỳ diệu
+            cho cuộc sống số.
+          </p>
+          <p class="about-bio">
+            Portfolio này được xây dựng trong khuôn khổ môn học <em>Nhập môn
+              Công nghệ số và AI (VNU1001)</em>, phản ánh hành trình khám phá và
+            học hỏi của mình trong thế giới công nghệ số — từ những kỹ năng cơ bản
+            đến kiến trúc phần mềm và ứng dụng AI.
+          </p>
+          <div class="about-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>"Công nghệ không phải là đích đến — nó là cánh tay nối dài để giải quyết vấn đề và tạo ra giá trị thực
+              sự."</p>
+          </div>
+        </div>
+
+        <!-- Thẻ dưới trái: Mục tiêu học tập -->
+        <div class="about-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+          <div class="about-card__icon-wrap about-card__icon-wrap--orange">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="about-card__title">Mục tiêu học tập</h3>
+          <ul class="about-goals">
+            <li><i class="fa-solid fa-plus"></i> Nắm vững nền tảng lập trình Java, Python và các cấu trúc dữ liệu quan
+              trọng trong công nghệ thông tin.</li>
+            <li><i class="fa-solid fa-plus"></i> Phát triển tư duy hệ thống, khả năng thiết kế kiến trúc phần mềm và làm
+              việc nhóm hiệu quả.</li>
+            <li><i class="fa-solid fa-plus"></i> Khai thác AI (Prompt Engineering, Generative AI) một cách có trách
+              nhiệm và đạo đức trong học tập lẫn dự án thực tế.</li>
+            <li><i class="fa-solid fa-plus"></i> Xây dựng portfolio thực chiến để chuẩn bị cho hành trình trở thành kỹ
+              sư phần mềm chuyên nghiệp.</li>
+          </ul>
+        </div>
+
+        <!-- Thẻ dưới phải: Định hướng phát triển -->
+        <div class="about-card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+          <div class="about-card__icon-wrap about-card__icon-wrap--green">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="about-card__title">Định hướng phát triển</h3>
+          <div class="about-directions">
+            <div class="about-direction-item">
+              <div class="about-direction-icon" style="color:#3b82f6;background:rgba(59,130,246,0.12)">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <strong>Kỹ sư phần mềm</strong>
+                <p>Chuyên sâu về Back-end, kiến trúc hệ thống phân tán và lập trình đa luồng.</p>
+              </div>
+            </div>
+            <div class="about-direction-item">
+              <div class="about-direction-icon" style="color:#8b5cf6;background:rgba(139,92,246,0.12)">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div>
+                <strong>AI & Công nghệ số</strong>
+                <p>Khám phá ứng dụng của trí tuệ nhân tạo vào phát triển phần mềm và tự động hóa quy trình.</p>
+              </div>
+            </div>
+            <div class="about-direction-item">
+              <div class="about-direction-icon" style="color:#10b981;background:rgba(16,185,129,0.12)">
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <div>
+                <strong>Đóng góp cộng đồng</strong>
+                <p>Tham gia các dự án mã nguồn mở, chia sẻ kiến thức và phát triển hệ sinh thái công nghệ Việt Nam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /about-grid -->
+    </div><!-- /container -->
   </section>
 
   <!-- ========================================
@@ -850,6 +986,184 @@
 
         </div><!-- /retro-grid -->
       </div><!-- /reflection-content -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ========================================
+       PHẦN 7: SUMMARY SECTION (Tổng kết)
+  ======================================== -->
+  <section class="summary" id="summary">
+    <div class="container">
+
+      <!-- Tiêu đề -->
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag section-tag--gold">Nhìn lại</span>
+        <h2 class="section-title">Tổng kết</h2>
+        <p class="section-subtitle">Hành trình, cảm xúc và những điều mình mang theo</p>
+      </div>
+
+      <!-- Row 1: Trải nghiệm + Điểm tâm đắc -->
+      <div class="summary-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+
+        <!-- Trái: Trải nghiệm cá nhân -->
+        <div class="summary-card summary-card--wide">
+          <div class="summary-card__header">
+            <div class="summary-card__icon" style="background:rgba(100,116,139,0.15);color:#94a3b8">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3>Trải nghiệm và cảm nhận cá nhân</h3>
+          </div>
+          <p class="summary-text">
+            Khi bắt đầu môn học, tôi hơi choáng ngợp trước lượng kiến thức về công nghệ số.
+            Nhưng qua từng bài tập, tôi dần nhận ra rằng công nghệ không quá xa vời —
+            nó là công cụ đắc lực cho những ai biết cách dùng. Việc tự tay xây dựng
+            portfolio này đã giúp tôi <em>"học mà làm, làm mà học"</em>.
+          </p>
+          <p class="summary-text">
+            Điều tôi nhớ nhất là bài tập về AI có trách nhiệm: tôi đã phải suy nghĩ rất nhiều
+            về ranh giới giữa hỗ trợ và lạm dụng AI. Cảm giác khi hoàn thành bộ nguyên tắc
+            của riêng mình thật sự rất tự hào. Môn học đã thay đổi cách tôi nhìn nhận
+            công nghệ: không phải là thứ gì đó quá kỹ thuật, mà là một người bạn đồng hành.
+          </p>
+          <!-- Timeline -->
+          <div class="summary-timeline">
+            <div class="summary-timeline__item">
+              <div class="summary-timeline__dot"></div>
+              <div>
+                <strong>Tuần đầu tiên</strong>
+                <p>Bỡ ngỡ với các công cụ số, Git, Markdown. Nhờ cộng đồng và tài liệu online, tôi dần làm quen được.
+                </p>
+              </div>
+            </div>
+            <div class="summary-timeline__item">
+              <div class="summary-timeline__dot summary-timeline__dot--mid"></div>
+              <div>
+                <strong>Giữa kỳ học</strong>
+                <p>Bắt đầu hào hứng với AI, viết prompt và tạo nội dung. Nhận ra mình cần kiểm tra lại thông tin AI cung
+                  cấp.</p>
+              </div>
+            </div>
+            <div class="summary-timeline__item">
+              <div class="summary-timeline__dot summary-timeline__dot--end"></div>
+              <div>
+                <strong>Cuối kỳ học</strong>
+                <p>Tự tin xây dựng portfolio, biết cách tổ chức dữ liệu và sử dụng AI có đạo đức. Trưởng thành hơn trong
+                  tư duy số.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phải: Điểm tâm đắc & Thách thức -->
+        <div class="summary-card">
+          <div class="summary-card__header">
+            <div class="summary-card__icon" style="background:rgba(245,158,11,0.15);color:#f59e0b">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Điểm tâm đắc và Thách thức</h3>
+          </div>
+
+          <p class="summary-section-label"><i class="fa-solid fa-heart" style="color:#ef4444"></i> Điểm tâm đắc
+            <em>(Những điều mình yêu thích)</em></p>
+          <div class="summary-highlights">
+            <div class="summary-highlight-item">
+              <i class="fa-solid fa-diamond" style="color:#8b5cf6"></i>
+              <div><strong>Ứng dụng AI trong lập trình:</strong> Tôi rất thích sử dụng AI để hỗ trợ debug code và thiết
+                kế kiến trúc hệ thống — nó giúp tôi hiểu sâu hơn và thấy tiềm năng của AI trong phát triển phần mềm.
+              </div>
+            </div>
+            <div class="summary-highlight-item">
+              <i class="fa-solid fa-diamond" style="color:#8b5cf6"></i>
+              <div><strong>Xây dựng portfolio từ đầu:</strong> Dù mất nhiều thời gian, nhưng khi nhìn thành quả là một
+                website hoàn chỉnh, tôi cảm thấy vô cùng thỏa mãn và tự hào.</div>
+            </div>
+            <div class="summary-highlight-item">
+              <i class="fa-solid fa-diamond" style="color:#8b5cf6"></i>
+              <div><strong>Bộ nguyên tắc AI có trách nhiệm:</strong> Đó không chỉ là bài tập mà còn là kim chỉ nam cho
+                tôi trong suốt quá trình học tập và phát triển sau này.</div>
+            </div>
+          </div>
+
+          <p class="summary-section-label" style="margin-top:1.5rem"><i class="fa-solid fa-hand-fist"
+              style="color:#f59e0b"></i> Thách thức đã vượt qua</p>
+          <div class="summary-challenges">
+            <div class="summary-challenge-item">
+              <i class="fa-solid fa-diamond" style="color:#f59e0b"></i>
+              <div><strong>Race Condition trong BidHub:</strong> Ban đầu rất lúng túng với vấn đề đa luồng. Nhờ đọc tài
+                liệu và thực hành với <code>synchronized</code>, cuối cùng đã có một hệ thống ổn định.</div>
+            </div>
+            <div class="summary-challenge-item">
+              <i class="fa-solid fa-diamond" style="color:#f59e0b"></i>
+              <div><strong>AI hallucination khi nghiên cứu:</strong> Có những kết quả AI cho trông rất chuyên nghiệp
+                nhưng lại sai. Tôi đã học cách dùng Google Scholar và tài liệu chính thức để xác thực.</div>
+            </div>
+            <div class="summary-challenge-item">
+              <i class="fa-solid fa-diamond" style="color:#f59e0b"></i>
+              <div><strong>Quản lý 6 bài tập cùng lúc:</strong> Tôi đã lập kế hoạch chi tiết và dùng GitHub Projects để
+                theo dõi — nhờ đó hoàn thành đúng hạn mà không bị quá tải.</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /summary-row -->
+
+      <!-- Row 2: Kiến thức đã học + Lời kết -->
+      <div class="summary-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+
+        <!-- Trái: Kiến thức & kỹ năng -->
+        <div class="summary-card summary-card--wide">
+          <div class="summary-card__header">
+            <div class="summary-card__icon" style="background:rgba(139,92,246,0.15);color:#8b5cf6">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Kiến thức và kỹ năng đã học được</h3>
+          </div>
+          <div class="summary-skills-tags">
+            <span class="summary-skill-tag"><i class="fa-solid fa-folder"></i> Quản lý tệp và thư mục kỹ thuật số</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm học thuật nâng
+              cao</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Kỹ thuật viết Prompt (Prompt
+              Engineering)</span>
+            <span class="summary-skill-tag"><i class="fa-brands fa-github"></i> Hợp tác trực tuyến (Git, GitHub)</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-palette"></i> Thiết kế nội dung số với Canva</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-scale-balanced"></i> Đạo đức AI và liêm chính học
+              thuật</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-code"></i> Lập trình Java & Python cơ bản</span>
+            <span class="summary-skill-tag"><i class="fa-solid fa-globe"></i> Xây dựng website portfolio</span>
+          </div>
+          <p class="summary-text" style="margin-top:1.5rem">
+            Quan trọng nhất, tôi học được cách <strong>học tập chủ động</strong> và <strong>tư duy phản biện</strong>
+            trước thông tin từ AI. Những kỹ năng này chắc chắn sẽ là hành trang quý giá
+            khi tôi trở thành kỹ sư phần mềm, biết cách khai thác công nghệ để giải quyết
+            vấn đề thực tế một cách hiệu quả và đạo đức.
+          </p>
+        </div>
+
+        <!-- Phải: Lời kết -->
+        <div class="summary-card summary-card--closing">
+          <div class="summary-closing-icon" aria-hidden="true">🌸</div>
+          <h3 class="summary-closing-title">Lời kết</h3>
+          <p class="summary-text">
+            Môn học Nhập môn Công nghệ số và AI không chỉ trang bị cho tôi
+            những kỹ năng số cụ thể, mà còn mở ra một hướng đi mới:
+            <strong>kỹ sư phần mềm — người kiến tạo tương lai số</strong>.
+            Tôi hiểu rằng trong tương lai, lập trình viên không thể chỉ
+            giỏi chuyên môn mà còn phải biết làm bạn với dữ liệu và AI.
+            Cảm ơn thầy cô và các bạn đã đồng hành.
+          </p>
+          <p class="summary-text">
+            Portfolio này sẽ là kỷ vật đầu tiên trong hành trình dài phía trước của tôi.
+          </p>
+          <div class="summary-final-quote">
+            <span class="summary-final-quote__icon" aria-hidden="true">🌺</span>
+            <p>"Code là ngôn ngữ của tôi, sáng tạo là linh hồn của tôi, và công nghệ là cánh tay để tôi thay đổi thế
+              giới."</p>
+            <footer>— Nguyễn Công Minh, VNU1001_E252014 🎓</footer>
+          </div>
+        </div>
+
+      </div><!-- /summary-row -->
+
     </div><!-- /container -->
   </section>
 
