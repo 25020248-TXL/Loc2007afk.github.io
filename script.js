@@ -264,3 +264,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 }); // Kết thúc DOMContentLoaded
+
+/* ============================================================
+   9. THEME TOGGLE - Chuyển đổi giao diện sáng/tối
+   ============================================================ */
+(function () {
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const htmlEl = document.documentElement;
+
+  // Khôi phục theme đã lưu (hoặc mặc định dark)
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  applyTheme(savedTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      localStorage.setItem('portfolio-theme', next);
+
+      // Ripple effect khi click
+      const track = themeToggleBtn.querySelector('.theme-toggle__track');
+      track.style.transform = 'scale(0.92)';
+      setTimeout(() => { track.style.transform = ''; }, 150);
+    });
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      htmlEl.setAttribute('data-theme', 'light');
+    } else {
+      htmlEl.removeAttribute('data-theme');
+    }
+    // Cập nhật ARIA label
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute(
+        'aria-label',
+        theme === 'light' ? 'Chuyển sang giao diện tối' : 'Chuyển sang giao diện sáng'
+      );
+      themeToggleBtn.setAttribute(
+        'title',
+        theme === 'light' ? 'Chuyển sang giao diện tối' : 'Chuyển sang giao diện sáng'
+      );
+    }
+  }
+})();
